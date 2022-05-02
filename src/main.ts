@@ -8,13 +8,15 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        urls: ['amqps://wvxcnisk:0GSLOX-lWFZHKDCwDVP4zDXGx9N7Qjhk@snake.rmq2.cloudamqp.com/wvxcnisk'],
+        urls: [
+          'amqps://wvxcnisk:0GSLOX-lWFZHKDCwDVP4zDXGx9N7Qjhk@snake.rmq2.cloudamqp.com/wvxcnisk',
+        ],
         queue: 'auth',
         queueOptions: {
-          durable: false
+          durable: false,
         },
+      },
     },
-  },
   );
   app.listen();
 }
